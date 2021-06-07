@@ -26,8 +26,7 @@ class Test1Fixture(NutterFixture):
     assert(self.code1_result == "ERROR")
 
   def run_code2(self):
-    # if we use `dbutils.notebook.run`, then we need to call `generate_data()` from inside of it...
-    # in that case we may need to have a separate notebook that will load functions & call that function
+
     dbutils.notebook.run('./Code2', default_timeout)
     
   def assertion_code2(self):
